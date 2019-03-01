@@ -7,6 +7,11 @@ bash:
 flake8:
 	sudo docker-compose run --rm web flake8 .
 migrate:
-	sudo docker-compose run web python manage.py migrate
+	sudo docker-compose run web python manage.py makemigrations && sudo docker-compose run web python manage.py migrate
 test:
-	sudo docker-compose run web python manage.py test
+	sudo docker-compose run web python manage.py test webapps.exam_sheets.tests
+shell:
+	sudo docker-compose run web python manage.py shell
+start:
+	sudo docker-compose build web && sudo docker-compose run web python manage.py makemigrations \
+	&& sudo docker-compose run web python manage.py migrate && sudo docker-compose up web
