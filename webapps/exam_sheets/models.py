@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 from django.core.validators import MinValueValidator, MaxValueValidator, ValidationError
+
 
 class UserProfile(AbstractUser):
     is_examinator = models.BooleanField(default=False)
@@ -16,7 +14,14 @@ class ExamSheet(models.Model):
 
 
 class Exam(models.Model):
-    final_grade = models.IntegerField(default=0)
+    IS_PASSED_CHOICES = (
+        ('PASSED', 'Passed'),
+        ('NOT PASSED', 'Not passed'),
+        ('PENDING', 'pending')
+    )
+
+    achieved_points = models.IntegerField(default=0)
+    is_passed = models.CharField(max_length=30, choices=IS_PASSED_CHOICES, default='PENDING')
     exam_sheet = models.ForeignKey(ExamSheet, on_delete=models.CASCADE)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
@@ -28,11 +33,14 @@ class Task(models.Model):
             MinValueValidator(0)
         ]
     )
-    exam_sheet = models.ForeignKey(ExamSheet, on_delete=models.CASCADE)
+    exam_sheet = models.ForeignKey(ExamSheet, on_delete=models.CASCADE, related_name='tasks')
+
 
 class Answer(models.Model):
     answer = models.CharField(max_length=100)
-    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='answers')
+    # TODO: Field with exam? Many answers to one questions
+
     assigned_points = models.IntegerField(default=0,
                                           validators=[
                                               MinValueValidator(0),

@@ -10,7 +10,7 @@ Than run project using single command -> _**make start**_
 Project will run with clean db, so you have to create users.
 
 To create user you have to run command **make shell**
-It will open django shell, than you have to type:
+It will open python shell, than you have to type:
 
 **from webapps.exam_sheets.models import UserProfile
 user1 = UserProfile.objects.create_user(username="", password="", email="", is_examinator=True)

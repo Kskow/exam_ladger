@@ -5,3 +5,4 @@ flake8
 requests
 django-rest-auth
 ipdb
+drf-extensions

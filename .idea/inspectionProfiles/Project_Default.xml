@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="32">
+          <list size="34">
             <item index="0" class="java.lang.String" itemvalue="six" />
             <item index="1" class="java.lang.String" itemvalue="pyflakes" />
             <item index="2" class="java.lang.String" itemvalue="pytest" />
@@ -37,8 +37,17 @@
             <item index="29" class="java.lang.String" itemvalue="ipdb" />
             <item index="30" class="java.lang.String" itemvalue="prompt-toolkit" />
             <item index="31" class="java.lang.String" itemvalue="pygments" />
+            <item index="32" class="java.lang.String" itemvalue="drf-extensions" />
+            <item index="33" class="java.lang.String" itemvalue="djangorestframework" />
           </list>
         </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="djangorestframework" />
+        </list>
       </option>
     </inspection_tool>
   </profile>

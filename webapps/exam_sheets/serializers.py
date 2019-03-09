@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from webapps.exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
 
+
 class ExamSheetSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
 
@@ -10,10 +11,15 @@ class ExamSheetSerializer(serializers.ModelSerializer):
 
 
 class ExamSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(
+        read_only=True,
+        default=serializers.CurrentUserDefault()
+    )
 
     class Meta:
         model = Exam
-        fields = ('id', 'final_grade', 'exam_sheet', 'user')
+        fields = ('id', 'achieved_points', 'exam_sheet', 'user', 'is_passed')
+        read_only_fields = ('achieved_points', 'is_passed')
         validators = [
             serializers.UniqueTogetherValidator(
                 queryset=model.objects.all(),
@@ -21,16 +27,23 @@ class ExamSerializer(serializers.ModelSerializer):
             )
         ]
 
+
 class TaskSerializer(serializers.ModelSerializer):
+    # exam_sheet = serializers.SlugRelatedField(
+    #     queryset=ExamSheet.objects.all(),
+    #     slug_field='id'
+    # )
     class Meta:
         model = Task
         fields = ('id', 'question', 'max_points', 'exam_sheet')
+
         validators = [
             serializers.UniqueTogetherValidator(
                 queryset=model.objects.all(),
                 fields=('question', 'exam_sheet'),
             )
         ]
+
 
 class AnswerUserSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(
@@ -41,14 +54,13 @@ class AnswerUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer
         fields = ('id', 'answer', 'assigned_points', 'task', 'user')
-        read_only_fields=('assigned_points', )
+        read_only_fields = ('assigned_points', )
         validators = [
             serializers.UniqueTogetherValidator(
                 queryset=model.objects.all(),
                 fields=('user', 'task'),
             )
         ]
-
 
 
 class AnswerExaminatorSerializer(serializers.ModelSerializer):
@@ -67,6 +79,7 @@ class AnswerExaminatorSerializer(serializers.ModelSerializer):
                 f"Assigned points {points} can not be higher than max points {max_points}!"
             )
         return super().validate(attrs)
+
 
 class UserProfileSerializer(serializers.ModelSerializer):
 

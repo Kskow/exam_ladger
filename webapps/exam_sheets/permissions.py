@@ -9,10 +9,12 @@ class IsExamiantorOrSheetOwner(permissions.BasePermission):
     message = 'You are not allowed to see these page!'
 
     def has_permission(self, request, view):
+
         return request.user.is_examinator
 
     def has_object_permission(self, request, view, obj):
         return obj.user == request.user and request.user.is_examinator
+
 
 class IsExaminatorAndTaskOwner(permissions.BasePermission):
     """
@@ -21,12 +23,13 @@ class IsExaminatorAndTaskOwner(permissions.BasePermission):
     message = 'You are not allowed to enter here!'
 
     def has_permission(self, request, view):
-        if request.method in permissions.SAFE_METHODS:
-            return True
+        # if request.method in permissions.SAFE_METHODS:
+        #     return True
         try:
-            exam_sheet_id = request.data['exam_sheet']
+            # import ipdb;ipdb.set_trace()
+            exam_sheet_id = int(request.parser_context['kwargs']['parent_lookup_exam_sheet'])
             exam_sheet = ExamSheet.objects.get(pk=exam_sheet_id)
-            return exam_sheet.user == request.user
+            return exam_sheet.user.pk == request.user.pk
         except Exception:
             return True
 
@@ -35,7 +38,8 @@ class IsExaminatorAndTaskOwner(permissions.BasePermission):
             return True
         return request.user.id == obj.exam_sheet.user.pk
 
-class IsExaminatorOrAnswerOwner(permissions.BasePermission):
+
+class IsExaminatorOrOwner(permissions.BasePermission):
 
     message = 'You are not allowed to enter here!'
 
@@ -45,4 +49,3 @@ class IsExaminatorOrAnswerOwner(permissions.BasePermission):
         if request.user.id != obj.user.pk:
             return False
         return True
-

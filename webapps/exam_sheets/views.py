@@ -1,31 +1,33 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from webapps.exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
 from webapps.exam_sheets.serializers import ExamSheetSerializer, ExamSerializer, TaskSerializer, AnswerUserSerializer, \
     UserProfileSerializer, AnswerExaminatorSerializer
 from rest_framework import generics
 from django.http import HttpResponse
 from webapps.exam_sheets.permissions import IsExamiantorOrSheetOwner, IsExaminatorAndTaskOwner, \
-    IsExaminatorOrAnswerOwner
+    IsExaminatorOrOwner
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import viewsets
+from rest_framework_extensions.mixins import NestedViewSetMixin
 
-def health_check(request):
+
+def health_check(Response):
     return HttpResponse()
 
 
-class UserList(generics.ListAPIView):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = UserProfileSerializer
     queryset = UserProfile.objects.all()
 
-class ExamSheetCreate(generics.CreateAPIView):
-    """
-    View where examinator can create new sheet
-    """
-    permission_classes = (IsAuthenticated, IsExamiantorOrSheetOwner, )
 
+class ExamSheetViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
+    """
+    View where examinator can create new sheet and see exam sheets which belongs to him
+    """
     serializer_class = ExamSheetSerializer
+    permission_classes = (IsAuthenticated, IsExamiantorOrSheetOwner,)
 
+    def get_queryset(self):
+        return ExamSheet.objects.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         """
@@ -35,62 +37,58 @@ class ExamSheetCreate(generics.CreateAPIView):
         user = self.request.user
         serializer.save(user=user)
 
-class ExamSheetDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    View where examinator can get,put and delete examsheet
-    """
-    permission_classes = (IsAuthenticated, IsExamiantorOrSheetOwner,)
 
-    queryset = ExamSheet.objects.all()
-    serializer_class = ExamSheetSerializer
-
-class TaskCreate(generics.CreateAPIView):
+class TaskViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     """
-    View where Examinator can add tasks
+    View where Examinator can add tasks to his exam and see list of his tasks, if url is nested then
+    examinator see list of tasks filtered by exam_sheet in url, user will see only tasks by exams which he try to
+    retrive.
     """
-
-    permission_classes = (IsAuthenticated, IsExaminatorAndTaskOwner,)
-
-    serializer_class = TaskSerializer
-
-class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    View where Examiantor can check/update/delete task details
-    """
-    permission_classes = (IsAuthenticated, IsExaminatorAndTaskOwner,)
-
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    permission_classes = (IsAuthenticated, IsExaminatorAndTaskOwner)
 
 
-class ExamDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated,)
+class ExamViewSet(viewsets.ModelViewSet):
+    """
+    View where user can create instance of exam_sheet which belongs to him and list all his exams
+    """
+    permission_classes = (IsAuthenticated, IsExaminatorOrOwner)
 
-    queryset = Exam.objects.all()
     serializer_class = ExamSerializer
+    queryset = Exam.objects.all()
 
-class AnswerCreate(generics.CreateAPIView):
+    def perform_create(self, serializer):
+        user = self.request.user
+        serializer.save(user=user)
+
+
+class AnswerViewSet(viewsets.ModelViewSet):
     """
     View where exam_sheet author can see all answers assigned to task which belongs to his sheet
     """
-    permission_classes = (IsAuthenticated, IsExaminatorOrAnswerOwner,)
-
+    permission_classes = (IsAuthenticated, IsExaminatorOrOwner,)
     serializer_class = AnswerUserSerializer
+    queryset = Answer.objects.all()
+
+    def get_serializer_class(self):
+        if self.request.user.is_examinator:
+            return AnswerExaminatorSerializer
+        return AnswerUserSerializer
 
     def perform_create(self, serializer):
         """
         Answer is created by already logged in user
         """
         user = self.request.user
-        answer = serializer.save(user=user)
-
+        serializer.save(user=user)
 
 
 class AnswerDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     View where user can retrive/update his answer, and exam_sheet author can assigne points.
     """
-    permission_classes = (IsAuthenticated, IsExaminatorOrAnswerOwner,)
+    permission_classes = (IsAuthenticated, IsExaminatorOrOwner,)
 
     queryset = Answer.objects.all()
 
