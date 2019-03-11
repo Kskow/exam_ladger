@@ -39,8 +39,7 @@ class Task(models.Model):
 class Answer(models.Model):
     answer = models.CharField(max_length=100)
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='answers')
-    # TODO: Field with exam? Many answers to one questions
-
+    exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
     assigned_points = models.IntegerField(default=0,
                                           validators=[
                                               MinValueValidator(0),

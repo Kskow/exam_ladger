@@ -23,15 +23,18 @@ class IsExaminatorAndTaskOwner(permissions.BasePermission):
     message = 'You are not allowed to enter here!'
 
     def has_permission(self, request, view):
-        # if request.method in permissions.SAFE_METHODS:
-        #     return True
         try:
-            # import ipdb;ipdb.set_trace()
+            if '/api/exams/' in request._request.path_info and request.method == 'GET':
+                # FIXME: I know I should not take data from private.
+                return True
+
             exam_sheet_id = int(request.parser_context['kwargs']['parent_lookup_exam_sheet'])
             exam_sheet = ExamSheet.objects.get(pk=exam_sheet_id)
-            return exam_sheet.user.pk == request.user.pk
-        except Exception:
-            return True
+            if exam_sheet.user.pk == request.user.pk:
+                return True
+
+        except ExamSheet.DoesNotExist:
+            return False
 
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:

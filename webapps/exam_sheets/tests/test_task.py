@@ -1,7 +1,6 @@
-from webapps.exam_sheets.models import UserProfile, ExamSheet
+from webapps.exam_sheets.models import UserProfile, ExamSheet, Task, Exam
 from rest_framework.test import APITestCase
 from webapps.exam_sheets.tests.data import *
-from webapps.exam_sheets.models import Task
 
 
 class TaskPermittedUser(APITestCase):
@@ -28,6 +27,13 @@ class TaskPermittedUser(APITestCase):
             is_examinator=False
         )
 
+        self.user_2 = UserProfile.objects.create_user(
+            username='HaveNot3Perms911',
+            email='testowyso1bie311@mail.pl',
+            password=self.not_hashed_password,
+            is_examinator=False
+        )
+
         self.client.force_login(self.examinator_owner)
 
         self.exam_sheet = ExamSheet.objects.create(
@@ -43,6 +49,7 @@ class TaskPermittedUser(APITestCase):
             "exam_sheet": self.exam_sheet.id
         })
         self.assertEqual(201, test_task.status_code)
+
 
     def test_examinator_cant_create_task_to_sheet_which_does_not_belong_to_him(self):
         # Re-log to not owner
@@ -78,13 +85,13 @@ class TaskPermittedUser(APITestCase):
         # login normal user
         self.client.force_login(self.user)
 
-        # retrive this task
-        retrive_task_as_user = self.client.get(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id,
+        # retrieve this task
+        retrieve_task_as_user = self.client.get(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id,
                                                                     task_id=test_task.data['id'])
                                                )
-        self.assertEqual(403, retrive_task_as_user.status_code)
+        self.assertEqual(403, retrieve_task_as_user.status_code)
 
-    def test_examinator_but_not_owner_cant_retrive_task(self):
+    def test_examinator_but_not_owner_cant_retrieve_task(self):
         # Create test_task
         test_task = self.client.post(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=''), {
             "question": "WTF??",
@@ -98,6 +105,20 @@ class TaskPermittedUser(APITestCase):
 
         get_task = self.client.get(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=test_task.data['id']))
         self.assertEqual(403, get_task.status_code)
+
+    def test_examinator_and_owner_can_retrieve_task(self):
+        # Create test_task
+        test_task = self.client.post(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=''), {
+            "question": "WTF??",
+            "max_points": 5,
+            "exam_sheet": self.exam_sheet.id
+        })
+        self.assertEqual(201, test_task.status_code)
+
+        test_task_2 = Task.objects.create(question="DUPA?", max_points=10, exam_sheet=self.exam_sheet)
+
+        get_task = self.client.get(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=test_task.data['id']))
+        self.assertEqual(200, get_task.status_code)
 
     def test_all_tasks_assigned_to_exam_sheet_are_visible_only_by_sheet_owner(self):
         Task.objects.create(question="Testuje?", max_points=5, exam_sheet=self.exam_sheet)
@@ -124,3 +145,28 @@ class TaskPermittedUser(APITestCase):
         self.client.force_login(self.user)
         get_tasks = self.client.get(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=test_task.pk))
         self.assertEqual(403, get_tasks.status_code)
+
+    def test_user_see_task_from_exam_route(self):
+        self.client.force_login(self.user)
+        Task.objects.create(question="Testuje?", max_points=5, exam_sheet=self.exam_sheet)
+        exam = Exam.objects.create(exam_sheet=self.exam_sheet, user=self.user)
+        get_tasks = self.client.get(exam_tasks_url(exam_id=exam.pk, task_id=''))
+        self.assertEqual(200, get_tasks.status_code)
+
+    def test_user_cant_see_tasks_from_exam_route_when_exam_does_not_belong_to_him(self):
+        exam = Exam.objects.create(exam_sheet=self.exam_sheet, user=self.user)
+        self.client.force_login(self.user_2)
+        get_exam = self.client.get(exam_url(exam_id=exam.pk))
+        self.assertEqual(403, get_exam.status_code)
+
+    def test_user_cant_add_task_from_exam_route(self):
+        self.client.force_login(self.user)
+        exam = Exam.objects.create(exam_sheet=self.exam_sheet, user=self.user)
+        test_task = self.client.post(exam_tasks_url(exam_id=exam.pk, task_id=''), {
+            "question": "WTF??",
+            "max_points": 5,
+            "exam_sheet": self.exam_sheet.pk
+        })
+        self.assertEqual(403, test_task.status_code)
+
+

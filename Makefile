@@ -1,5 +1,5 @@
 build:
-	sudo docker-compose build web
+	sudo docker-compose build --no-cache web
 up:
 	sudo docker-compose up web
 bash:
