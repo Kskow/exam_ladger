@@ -10,6 +10,7 @@ class UserProfile(AbstractUser):
 
 class ExamSheet(models.Model):
     title = models.CharField(max_length=100, blank=False, unique=True)
+    max_points = models.IntegerField(default=0)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
 

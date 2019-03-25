@@ -22,6 +22,7 @@ class ExamSheetViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     """
     View where examinator can create new sheet and see exam sheets which belongs to him
     """
+    # TODO: Add points to max points field after adding task
     serializer_class = ExamSheetSerializer
     permission_classes = (IsAuthenticated, IsExamiantorOrSheetOwner,)
 
@@ -55,7 +56,6 @@ class ExamViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     """
     View where user can create instance of exam_sheet which belongs to him and list all his exams
     """
-    # TODO: automatical answer points assigment, updating these points, setting is_passed to PASSED
     # TODO: when all answers has been checked and points over 50%
     serializer_class = ExamSerializer
     queryset = Exam.objects.all()

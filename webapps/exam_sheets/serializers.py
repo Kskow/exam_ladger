@@ -7,7 +7,10 @@ class ExamSheetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExamSheet
-        fields = ('id', 'title', 'user')
+        fields = ('id', 'title', 'user', 'max_points')
+        read_only_fields = ('max_points',)
+    # TODO: max points assigned only with tasks, set default to tasks points
+    # TODO: max points can't be lower than 0
 
 
 class ExamSerializer(serializers.ModelSerializer):
@@ -26,7 +29,9 @@ class ExamSerializer(serializers.ModelSerializer):
                 fields=('exam_sheet', 'user'),
             )
         ]
-
+    # TODO: can't create instance if 0 task assigned to exam_sheet
+    # TODO: not possible to achieve more points than max exam_sheet points
+    # TODO: archieved points can't be lower than 0
 
 class TaskSerializer(serializers.ModelSerializer):
 
@@ -40,6 +45,26 @@ class TaskSerializer(serializers.ModelSerializer):
                 fields=('question', 'exam_sheet'),
             )
         ]
+    # TODO: max_points can't be lower than 0
+    def create(self, validated_data):
+        exam_sheet = ExamSheet.objects.get(pk=validated_data['exam_sheet'].pk)
+        exam_sheet.max_points += validated_data['max_points']
+        exam_sheet.save()
+
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        exam_sheet_id = self.instance.exam_sheet_id
+
+        actual_max_points = self.instance.max_points
+        self.instance.actual_max_points = self.validated_data['max_points']
+
+        exam_sheet = ExamSheet.objects.get(pk=exam_sheet_id)
+        exam_sheet.max_points = exam_sheet.max_points - actual_max_points + self.instance.actual_max_points
+        exam_sheet.save()
+
+        instance.save()
+        return instance
 
 
 class AnswerUserSerializer(serializers.ModelSerializer):
@@ -84,6 +109,7 @@ class AnswerExaminatorSerializer(serializers.ModelSerializer):
         model = Answer
         fields = ('id', 'answer', 'assigned_points', 'task', 'user')
         read_only_fields = ('user', 'answer', 'task')
+    # TODO: can't assigne points lower than 0
 
     def validate(self, attrs):
         max_points = self.instance.task.max_points
@@ -94,6 +120,19 @@ class AnswerExaminatorSerializer(serializers.ModelSerializer):
                 f"Assigned points {points} can not be higher than max points {max_points}!"
             )
         return super().validate(attrs)
+
+    def update(self, instance, validated_data):
+        exam_id = self.instance.exam_id
+
+        actual_answer_points = self.instance.assigned_points
+        self.instance.assigned_points = self.validated_data['assigned_points']
+
+        exam = Exam.objects.get(pk=exam_id)
+        exam.achieved_points = exam.achieved_points - actual_answer_points + self.instance.assigned_points
+        exam.save()
+
+        instance.save()
+        return instance
 
 
 class UserProfileSerializer(serializers.ModelSerializer):

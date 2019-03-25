@@ -108,6 +108,7 @@ class TaskPermittedUser(APITestCase):
 
     def test_examinator_and_owner_can_retrieve_task(self):
         # Create test_task
+        # import ipdb;ipdb.set_trace()
         test_task = self.client.post(exam_sheet_tasks_url(sheet_id=self.exam_sheet.id, task_id=''), {
             "question": "WTF??",
             "max_points": 5,
