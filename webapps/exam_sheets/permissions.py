@@ -23,15 +23,17 @@ class IsExaminatorAndTaskOwner(permissions.BasePermission):
     message = 'You are not allowed to enter here!'
 
     def has_permission(self, request, view):
-        # if request.method in permissions.SAFE_METHODS:
-        #     return True
         try:
-            # import ipdb;ipdb.set_trace()
+            if '/api/exams/' in request._request.path_info and request.method == 'GET':
+                return True
+
             exam_sheet_id = int(request.parser_context['kwargs']['parent_lookup_exam_sheet'])
             exam_sheet = ExamSheet.objects.get(pk=exam_sheet_id)
-            return exam_sheet.user.pk == request.user.pk
-        except Exception:
-            return True
+            if exam_sheet.user.pk == request.user.pk:
+                return True
+
+        except ExamSheet.DoesNotExist:
+            return False
 
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:
@@ -47,5 +49,11 @@ class IsExaminatorOrOwner(permissions.BasePermission):
         if request.user.is_examinator:
             return True
         if request.user.id != obj.user.pk:
+            # User is not owner
             return False
-        return True
+        if not obj.user.is_examinator and request.method == 'DELETE':
+            # user cant delete answer/exam
+            return False
+        if not obj.user.is_examinator and view.basename == 'exam' and not permissions.SAFE_METHODS:
+            # User cant edit exam
+            return False

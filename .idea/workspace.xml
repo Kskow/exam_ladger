@@ -2,23 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bd41922-6ee5-40af-a148-107d432ffe9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.in" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0002_auto_20190302_1702.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0003_auto_20190303_1412.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0004_auto_20190303_1819.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0005_auto_20190303_1920.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0006_auto_20190304_2131.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0007_auto_20190304_2140.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0008_auto_20190304_2158.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0009_auto_20190304_2238.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0010_auto_20190304_2252.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0011_auto_20190304_2304.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0012_auto_20190304_2339.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0013_auto_20190305_1612.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0014_auto_20190306_1747.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0015_auto_20190306_2007.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0016_auto_20190306_2017.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0017_auto_20190306_2030.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0018_auto_20190309_1303.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0019_task_exam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0020_auto_20190310_1132.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0021_auto_20190310_2030.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0022_auto_20190311_1845.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0023_auto_20190311_1849.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0024_exam_max_points.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/migrations/0025_auto_20190325_1742.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/signals.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/exam_sheets/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/exam_sheets/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +57,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/permissions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="360">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -41,22 +71,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -64,10 +85,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="110" column="84" selection-start-line="110" selection-start-column="84" selection-end-line="110" selection-end-column="84" />
+            <state relative-caret-position="276">
+              <caret line="172" selection-start-line="172" selection-end-line="172" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding>
-                <element signature="e#0#61#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,36 +138,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rest_auth</find>
-      <find>login</find>
-      <find>assign_</find>
-      <find>task_id =</find>
-      <find>task_id</find>
-      <find>author_id</find>
-      <find>user_Id</find>
-      <find>exam_sheet_id</find>
-      <find>self.an</find>
-      <find>delete</find>
-      <find>AnswerOwner</find>
-      <find>save</find>
-      <find>Owner</find>
-      <find>test_</find>
-      <find>self.exam_sheet</find>
-      <find>Examinator</find>
-      <find>def</find>
-      <find>author</find>
-      <find>Exam</find>
-      <find>reverse('exams)</find>
-      <find>_test</find>
-      <find>IsExaminatorOrAnswer</find>
-      <find>def _</find>
-      <find>print()</find>
-      <find>print</find>
-      <find>sheet_url</find>
       <find>rest_framework_nested</find>
       <find>NestedRegistryItem</find>
       <find>SHEETS</find>
       <find>`</find>
+      <find>_test</find>
+      <find>MIDDLE</find>
+      <find>.get_serializer_context</find>
+      <find>test_user_cant_add_task_from_exam_route</find>
+      <find>TODO</find>
+      <find>import</find>
+      <find>points_to_re_assign</find>
+      <find>cant_see_list</find>
+      <find>exam_sheet_ach</find>
+      <find>update_exam_sheet_max_points</find>
+      <find>ipdb</find>
+      <find>update</find>
+      <find>post</find>
+      <find>10</find>
+      <find>test_max_points_changed_properly_after_deleted_task</find>
+      <find>test_max_points_changed_properly_after_edited_task</find>
+      <find>delete</find>
+      <find>test_points_from_exam_and_sheet_correctly_deducted_when_task_is_delete</find>
+      <find>test_user_can_generate_exam</find>
+      <find>import ipdb;ipdb</find>
+      <find>check_that_all_answers_assigned_to_exam_are_checked</find>
+      <find>va</find>
+      <find>self.answers</find>
+      <find>retrieve_task</find>
+      <find>raise</find>
+      <find>validationError</find>
     </findStrings>
     <replaceStrings>
       <replace>task</replace>
@@ -136,30 +190,41 @@
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/run_web.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/migrations/serializers.py" />
-        <option value="$PROJECT_DIR$/webapps/urls.py" />
         <option value="$PROJECT_DIR$/webapps/test_settings.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/tests.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/tests.py" />
         <option value="$PROJECT_DIR$/webapps/readme.md" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/serializers.py" />
-        <option value="$PROJECT_DIR$/requirements.in" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/models.py" />
         <option value="$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework_extensions/mixins.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_views.py" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/permissions.py" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/data.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_nested_views.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/just_one.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_one.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/data.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/singals.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/__init__.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheets.py" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/webapps/exam_sheets/views.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/signals.py" />
+        <option value="$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/mixins.py" />
+        <option value="$PROJECT_DIR$/webapps/.flake8" />
+        <option value="$PROJECT_DIR$/.flake8" />
         <option value="$PROJECT_DIR$/webapps/settings.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/apps.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheet.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/admin.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/serializers.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py" />
+        <option value="$PROJECT_DIR$/requirements.in" />
+        <option value="$PROJECT_DIR$/webapps/urls.py" />
         <option value="$PROJECT_DIR$/webapps/exam_sheets/urls.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/models.py" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/permissions.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/webapps/exam_sheets/views.py" />
       </list>
     </option>
   </component>
@@ -193,6 +258,13 @@
               <item name="webapps" type="462c0819:PsiDirectoryNode" />
               <item name="exam_sheets" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="exams_ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exams_ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="webapps" type="462c0819:PsiDirectoryNode" />
+              <item name="exam_sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -201,15 +273,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exams_ledger (copy)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/webapps" />
       <recent name="$PROJECT_DIR$/webapps/exam_sheets/tests" />
       <recent name="$PROJECT_DIR$/webapps/exam_sheets" />
-      <recent name="$PROJECT_DIR$/webapps" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,11 +314,11 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2594044" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.2594044" />
+      <window_info id="Structure" order="1" sideWeight="0.5048544" side_tool="true" weight="0.2594044" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -253,16 +326,16 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.37785017" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4992163" visible="true" weight="0.3436482" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5023511" side_tool="true" weight="0.3664495" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4976489" visible="true" weight="0.31921825" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2594044" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49514562" visible="true" weight="0.2594044" />
+      <window_info id="Structure" order="1" sideWeight="0.5048544" side_tool="true" weight="0.2594044" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
@@ -273,9 +346,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.37785017" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4992163" visible="true" weight="0.3534202" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5023511" side_tool="true" weight="0.3664495" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4976489" visible="true" weight="0.36525974" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -325,7 +398,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/webapps/exam_sheets/tests/data.py</url>
+          <url>file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -337,9 +410,6 @@
     <entry file="file://$PROJECT_DIR$/webapps/webapps/settings.py" />
     <entry file="file://$PROJECT_DIR$/web.sh" />
     <entry file="file://$PROJECT_DIR$/run_web.sh" />
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/contrib/auth/base_user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -376,35 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="943" column="6" lean-forward="true" selection-start-line="943" selection-start-column="6" selection-end-line="943" selection-end-column="6" />
-          <folding>
-            <element signature="e#4277#4558#0" />
-            <element signature="e#4607#4893#0" />
-            <element signature="e#4961#6226#0" />
-            <element signature="e#6399#6470#0" />
-            <element signature="e#6528#6588#0" />
-            <element signature="e#6636#6696#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/generics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -412,23 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="126">
-            <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/migrations/0016_auto_20190306_2017.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="113" lean-forward="true" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/migrations/0016_auto_20190306_2017.py" />
     <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -436,51 +461,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_health_check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,105 +485,217 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/models.py">
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_nested_views.py" />
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_one.py" />
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/singals.py" />
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/migrations/0021_auto_20190310_2030.py" />
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/signals.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="470" column="8" selection-start-line="470" selection-start-column="8" selection-end-line="470" selection-end-column="8" />
+          <folding>
+            <element signature="e#4277#4558#0" />
+            <element signature="e#4607#4893#0" />
+            <element signature="e#4961#6226#0" />
+            <element signature="e#6399#6470#0" />
+            <element signature="e#6528#6588#0" />
+            <element signature="e#6636#6696#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/data.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="104" column="6" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/core/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.flake8">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="75" lean-forward="true" selection-start-column="75" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_nested_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="70" column="52" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="70" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="95" column="64" selection-start-line="95" selection-start-column="64" selection-end-line="95" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4545">
-          <caret line="303" column="59" lean-forward="true" selection-start-line="303" selection-start-column="59" selection-end-line="303" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="110" column="84" selection-start-line="110" selection-start-column="84" selection-end-line="110" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="235">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam_sheet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
           <folding>
-            <element signature="e#308#317#0" expanded="true" />
+            <element signature="e#0#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/views.py">
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_answer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="103" column="46" lean-forward="true" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_exam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1314">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/tests/test_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="89" selection-start-line="11" selection-start-column="89" selection-end-line="11" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="45">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/exam_sheets/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
