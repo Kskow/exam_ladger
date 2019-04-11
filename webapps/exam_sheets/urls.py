@@ -23,10 +23,7 @@ exam_sheets_routes.register(r'tasks', TaskViewSet, 'exam_sheets-task', parents_q
           .register(r'answers',
                     AnswerViewSet,
                     base_name='exams-tasks-answer',
-                    parents_query_lookups=['task', 'exam_sheet__task'])
+                    parents_query_lookups=['exam_sheet__task', 'exam__task'])
 )
 
 urlpatterns += router.urls
-
-
-

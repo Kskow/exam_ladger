@@ -25,7 +25,6 @@ class IsExaminatorAndTaskOwner(permissions.BasePermission):
     def has_permission(self, request, view):
         try:
             if '/api/exams/' in request._request.path_info and request.method == 'GET':
-                # FIXME: I know I should not take data from private.
                 return True
 
             exam_sheet_id = int(request.parser_context['kwargs']['parent_lookup_exam_sheet'])
@@ -50,5 +49,11 @@ class IsExaminatorOrOwner(permissions.BasePermission):
         if request.user.is_examinator:
             return True
         if request.user.id != obj.user.pk:
+            # User is not owner
             return False
-        return True
+        if not obj.user.is_examinator and request.method == 'DELETE':
+            # user cant delete answer/exam
+            return False
+        if not obj.user.is_examinator and view.basename == 'exam' and not permissions.SAFE_METHODS:
+            # User cant edit exam
+            return False
