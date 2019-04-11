@@ -16,11 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('api/', include('webapps.exam_sheets.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('rest_auth.urls')),
-    path('docs', include_docs_urls(title='Exam Ledger API', public=False))
 ]
