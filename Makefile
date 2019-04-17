@@ -9,7 +9,7 @@ flake8:
 migrate:
 	sudo docker-compose run web python manage.py makemigrations && sudo docker-compose run web python manage.py migrate
 test:
-	sudo docker-compose run web python manage.py test webapps.exam_sheets.tests.test_task
+	sudo docker-compose run web python manage.py test exam_sheets.tests
 shell:
 	sudo docker-compose run web python manage.py shell
 start:

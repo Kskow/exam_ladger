@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from webapps.exam_sheets.views import ExamSheetViewSet, TaskViewSet, ExamViewSet, AnswerViewSet
+from exam_sheets.views import ExamSheetViewSet, TaskViewSet, ExamViewSet, AnswerViewSet
 from rest_framework_extensions.routers import ExtendedSimpleRouter
 
 

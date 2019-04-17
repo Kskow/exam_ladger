@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import include
 
 urlpatterns = [
-    path('api/', include('webapps.exam_sheets.urls')),
+    path('api/', include('exam_sheets.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('rest_auth.urls')),
 ]

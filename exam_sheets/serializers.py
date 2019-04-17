@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from webapps.exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
+from exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
 
 
 class ExamSheetSerializer(serializers.ModelSerializer):

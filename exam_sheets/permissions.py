@@ -1,5 +1,5 @@
 from rest_framework import permissions
-from webapps.exam_sheets.models import ExamSheet
+from exam_sheets.models import ExamSheet
 
 
 class IsExamiantorOrSheetOwner(permissions.BasePermission):

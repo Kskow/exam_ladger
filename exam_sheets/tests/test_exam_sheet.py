@@ -1,6 +1,6 @@
-from webapps.exam_sheets.models import UserProfile, ExamSheet
+from exam_sheets.models import UserProfile, ExamSheet
 from rest_framework.test import APITestCase
-from webapps.exam_sheets.tests.data import exam_sheet_url
+from exam_sheets.tests.data import exam_sheet_url
 
 
 class ExamSheetsPermitedUser(APITestCase):

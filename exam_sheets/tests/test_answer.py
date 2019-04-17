@@ -1,6 +1,6 @@
-from webapps.exam_sheets.models import UserProfile, Task, ExamSheet, Exam, Answer
+from exam_sheets.models import UserProfile, Task, ExamSheet, Exam, Answer
 from rest_framework.test import APITestCase
-from webapps.exam_sheets.tests.data import answers_url
+from exam_sheets.tests.data import answers_url
 
 
 class UserAnswer(APITestCase):

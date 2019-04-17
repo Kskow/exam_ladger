@@ -1,8 +1,8 @@
-from webapps.exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
-from webapps.exam_sheets.serializers import ExamSheetSerializer, ExamSerializer, TaskSerializer, AnswerUserSerializer, \
+from exam_sheets.models import ExamSheet, Exam, Task, Answer, UserProfile
+from exam_sheets.serializers import ExamSheetSerializer, ExamSerializer, TaskSerializer, AnswerUserSerializer, \
     UserProfileSerializer, AnswerExaminatorSerializer
 from django.http import HttpResponse
-from webapps.exam_sheets.permissions import IsExamiantorOrSheetOwner, IsExaminatorAndTaskOwner, \
+from exam_sheets.permissions import IsExamiantorOrSheetOwner, IsExaminatorAndTaskOwner, \
     IsExaminatorOrOwner
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets
